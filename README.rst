@@ -127,7 +127,7 @@ Bugs
 
 .. |build status| image:: https://circleci.com/gh/cometaj2/hcli_hak11.svg?style=shield
    :target: https://circleci.com/gh/cometaj2/hcli_hak11
-.. |pypi| image:: https://img.shields.io/pypi/v/hcli-hc?label=hcli-hc
-   :target: https://pypi.org/project/hcli-hc
-.. |pyver| image:: https://img.shields.io/pypi/pyversions/hcli-hc.svg
-   :target: https://pypi.org/project/hcli-hc
+.. |pypi| image:: https://img.shields.io/pypi/v/hcli-hak11?label=hcli-hak11
+   :target: https://pypi.org/project/hcli-hak11
+.. |pyver| image:: https://img.shields.io/pypi/pyversions/hcli-hak11.svg
+   :target: https://pypi.org/project/hcli-hak11

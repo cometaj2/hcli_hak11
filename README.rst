@@ -20,37 +20,18 @@ You can find out more about HCLI on hcli.io [3]
 AK-11 Keypad Circuit and Relay Setup
 ====================================
 
-Keypad Circuit
---------------
-
-The AK-11 keypad uses a matrix circuit design. In this setup:
-
-Each button connects a unique combination of row and column pins when pressed.
-The circuit remains open until a button is pressed, closing the circuit for that specific pin combination.
-
 Relay Function
 --------------
 
 The relays act as electronic switches, controlled by the Raspberry Pi's GPIO pins.
-When activated, a relay closes the circuit between two specific pins on the keypad, simulating a button press.
+When activated, a relay closes the circuit between two specific pins of the keypad's 7 pins, simulating a button press.
 The relays do not introduce any new voltage to the system. They only allow the existing voltage in the keypad circuit to flow when "closed".
 Importantly, the relays function as bidirectional switches. The "input" and "output" designations are interchangeable, as the relay simply creates a connection between two points.
 
 Multiplexing Strategy
 ---------------------
 
-The relay board's multiplexing strategy mirrors the keypad's internal multiplexing logic:
-
-Keypad Internal Multiplexing:
-
-The keypad uses a 7-pin interface to control 12 keys (0-9, *, #).
-It achieves this by correlating multiple digits to each pin, creating unique combinations for each key.
-
-Relay Board Multiplexing:
-
-The relay setup replicates this logic externally.
-It uses 7 connections to the keypad to control all 12 keys.
-The relay board creates the necessary pin combinations for each digit, just as the keypad's internal circuitry would.
+The relay board correlates the necessary pin combinations for each digit, just as the keypad's internal circuitry does.
 
 Pin correlation (both at the keypad and at the relays):
 
@@ -66,10 +47,6 @@ Relay Connection Directionality
 -------------------------------
 
 The relays in this setup function as simple switches, allowing current to flow in either direction when closed.
-The terms "input" and "output" on the relay are essentially arbitrary in this context.
-This bidirectional nature simplifies wiring and troubleshooting, as the orientation of the relay connections to the keypad pins doesn't affect functionality.
-
-This bidirectional property of the relays adds flexibility to the setup and confirms that the system is working with the keypad's existing circuitry rather than imposing new electrical conditions.
 
 Installation
 ------------

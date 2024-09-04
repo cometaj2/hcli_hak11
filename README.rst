@@ -35,13 +35,13 @@ The relay board correlates the necessary pin combinations for each digit, just a
 
 Pin correlation (both at the keypad and at the relays):
 
-Pin 1, 3 connections: *0#
-Pin 2, 4 connections: 147*
-Pin 3, 3 connections: 123
-Pin 4, 4 connections: 2580
-Pin 5, 4 connections: 369#
-Pin 6, 3 connections: 456
-Pin 7, 3 connections: 789
+* Pin 1, 3 connections: *0#
+* Pin 2, 4 connections: 147*
+* Pin 3, 3 connections: 123
+* Pin 4, 4 connections: 2580
+* Pin 5, 4 connections: 369#
+* Pin 6, 3 connections: 456
+* Pin 7, 3 connections: 789
 
 Installation
 ------------

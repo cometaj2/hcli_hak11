@@ -43,11 +43,6 @@ Pin 5, 4 connections: 369#
 Pin 6, 3 connections: 456
 Pin 7, 3 connections: 789
 
-Relay Connection Directionality
--------------------------------
-
-The relays in this setup function as simple switches, allowing current to flow in either direction when closed.
-
 Installation
 ------------
 

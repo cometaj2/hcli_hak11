@@ -23,10 +23,7 @@ AK-11 Keypad Circuit and Relay Setup
 Relay Function
 --------------
 
-The relays act as electronic switches, controlled by the Raspberry Pi's GPIO pins.
-When activated, a relay closes the circuit between two specific pins of the keypad's 7 pins, simulating a button press.
-The relays do not introduce any new voltage to the system. They only allow the existing voltage in the keypad circuit to flow when "closed".
-Importantly, the relays function as bidirectional switches. The "input" and "output" designations are interchangeable, as the relay simply creates a connection between two points.
+When activated, a relay closes the circuit between two specific pins of the keypad's 7 pins.
 
 Multiplexing Strategy
 ---------------------
@@ -35,13 +32,13 @@ The relay board correlates the necessary pin combinations for each digit, just a
 
 Pin correlation (both at the keypad and at the relays):
 
-* Pin 1, 3 connections: *0#
-* Pin 2, 4 connections: 147*
-* Pin 3, 3 connections: 123
-* Pin 4, 4 connections: 2580
-* Pin 5, 4 connections: 369#
-* Pin 6, 3 connections: 456
-* Pin 7, 3 connections: 789
+* Pin 1, 3 connections: "\*0#"
+* Pin 2, 4 connections: "147\*"
+* Pin 3, 3 connections: "123"
+* Pin 4, 4 connections: "2580"
+* Pin 5, 4 connections: "369#"
+* Pin 6, 3 connections: "456"
+* Pin 7, 3 connections: "789"
 
 Installation
 ------------

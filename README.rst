@@ -3,7 +3,7 @@
 HCLI hak11
 ==========
 
-HCLI hak11 is a python package wrapper that contains an HCLI sample application (hak11); hak11 is intended to run on a rapsberry pi setup to trigger relays via GPIO. 12 GPIO triggered relays are intended to be setup to interact with a Linear AK-11 keypad to enable remote administration of the AK-11 keypad.
+HCLI hak11 is a python package wrapper that contains an HCLI sample application (hak11); hak11 is intended to run on a rapsberry pi setup to trigger relays via GPIO. 12 GPIO triggered relays are intended to be setup to interact with a Linear AK-11 keypad to enable remote administration.
 
 ----
 

@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is loosely based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.0.3]
+- Fix README.rst and CHANGELOG.
+
 ## [0.0.2]
 - Fix README.rst by adding bullets to the pin list.
+- Remove python 3.8 support since not supported by gpiozero.
+- Add python 3.12 support.
 
 ## [0.0.1]
 - Initial HCLI AK-11 keypad overlay service implementation.

@@ -11,10 +11,7 @@ from relay import relay
 from datetime import datetime
 from collections import OrderedDict
 
-# from realay import controller as c
-
 logging = logger.Logger()
-logging.setLevel(logger.INFO)
 
 
 class Service:
@@ -38,14 +35,18 @@ class Service:
                        relay.Relay(5),
                        relay.Relay(6),
                        relay.Relay(13)]
+        self.digits = ["1","2","3","4","5","6","7","8","9","*","0","#"]
 
         return
 
-    def test(self):
-        for relay in self.relays:
-            relay.on()
+    def command(self, digits):
+        for digit in digits:
+            index = self.digits.index(digit)
+            self.relays[index].on()
             time.sleep(0.25)
-            relay.off()
+            logging.info(str(digit))
+            self.relays[index].off()
+            time.sleep(0.5)
 
     def tail(self):
          yield logging.tail()

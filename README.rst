@@ -100,8 +100,8 @@ we connect the relays in the convention order from top (starting on the left) to
 
 We ommit 3v power. 5v power is connected to the 5v power pins on the relay board (SainSmart 16-Channel 12V Relay Module Board for Arduino DSP AVR PIC ARM) so that the raspberry pi zero can be powered by the relay's 5v output.
 
-* 5v (2),      Relay Pin 5v
-* 5v (4),      Relay Pin 5v
+* 5v (2),      Relay 5v
+* 5v (4),      Relay 5v
 * GPIO2,       Relay 1
 * GPIO3,       Relay 2
 * GPIO4,       Relay 3

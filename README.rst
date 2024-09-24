@@ -17,8 +17,52 @@ You can find out more about HCLI on hcli.io [3]
 
 [3] http://hcli.io
 
+Installation
+------------
+
+HCLI hak11 requires a supported version of Python and pip.
+
+You'll need an HCLI Connector to run hak11. For example, you can use HCLI Core (https://github.com/cometaj2/hcli_core), a WSGI server such as Green Unicorn (https://gunicorn.org/), and an HCLI Client like Huckle (https://github.com/cometaj2/huckle).
+
+
+.. code-block:: console
+
+    pip install hcli-hak11
+    pip install hcli-core
+    pip install huckle
+    pip install gunicorn
+    gunicorn --workers=1 --threads=1 -b 0.0.0.0:8000 "hcli_core:connector(\"`hcli_hak11 path`\")"
+
+Usage
+-----
+
+Open a different shell window.
+
+Setup the huckle env eval in your .bash_profile (or other bash configuration) to avoid having to execute eval everytime you want to invoke HCLIs by name (e.g. hc).
+
+Note that no CLI is actually installed by Huckle. Huckle reads the HCLI semantics exposed by the API via HCLI Connector and ends up behaving *like* the CLI it targets.
+
+
+.. code-block:: console
+
+    huckle cli install http://127.0.0.1:8000
+    eval $(huckle env)
+    hak11 help
+
+Versioning
+----------
+    
+This project makes use of semantic versioning (http://semver.org) and may make use of the "devx",
+"prealphax", "alphax" "betax", and "rcx" extensions where x is a number (e.g. 0.3.0-prealpha1)
+on github.
+
+Supports
+--------
+
+- Interacting with raspberry pi GPIO setup to trigger a properly configured relay connected to a Linear AK-11 keypad's 7 circuit pins.
+
 Materials Used
-==============
+--------------
 
 * Raspberry pi zero with 40pin header & wifi
 * SainSmart 16-Channel 12V Relay Module Board for Arduino DSP AVR PIC ARM
@@ -27,9 +71,6 @@ Materials Used
 * 18 AWG Wire Electrical Wires 18 Gauge Tinned Copper Wire, PVC (OD: 1.85 mm) 6 Different Colored 16.4ft / 5m Each,Stranded Wire Hookup Wires for DIY DC/AC
 * 2.54mm Male Pin Header Single Row DIP Connector Kit，1 * 2/3/4/5/6/7/8/9/10/12Pin Straight Header Pin Breakaway PCB Board Pin Header Strip for Prototype Shield (Male-Pin-Single)
 * GKEEMARS 50 Pcs Wire Connector, 1 Conductor Compact Wire Connectors Splicing Connectors for Circuit Inline 24-12 AWG (Orange)
-
-AK-11 Keypad Circuit and Relay Setup
-====================================
 
 AK-11 Circuit
 -------------
@@ -96,9 +137,9 @@ GPIO 40 pin Schema
 Also by convention, we follow a path of least relay connectivity complexity for a wire ribon relative to both the 40 pin raspberry pi header and the relay's pin header.
 
 Looking at a diagram of a raspberry pi zero's 40 pin header, we assume pin 1 in a top left position and
-we connect the relays in the convention order from top (starting on the left) to bottom, and then breifly back up on the right from the bottom.
+we connect the relays in the convention order from top to bottom, starting from the top left, and then briefly back up on the right from the bottom.
 
-We ommit 3v power. 5v power is connected to the 5v power pins on the relay board (SainSmart 16-Channel 12V Relay Module Board for Arduino DSP AVR PIC ARM) so that the raspberry pi zero can be powered by the relay's 5v output.
+5v power is connected to the 5v power pins on the relay board (SainSmart 16-Channel 12V Relay Module Board for Arduino DSP AVR PIC ARM) so that the raspberry pi zero can be powered by the relay's 5v output.
 
 * 5v (2),      Relay 5v
 * 5v (4),      Relay 5v
@@ -120,50 +161,6 @@ We ommit 3v power. 5v power is connected to the 5v power pins on the relay board
 * GPIO20,      Relay 16 (unused)
 * Ground (34), Relay Ground
 * Ground (30), Relay Ground
-
-Installation
-------------
-
-HCLI hak11 requires a supported version of Python and pip.
-
-You'll need an HCLI Connector to run hak11. For example, you can use HCLI Core (https://github.com/cometaj2/hcli_core), a WSGI server such as Green Unicorn (https://gunicorn.org/), and an HCLI Client like Huckle (https://github.com/cometaj2/huckle).
-
-
-.. code-block:: console
-
-    pip install hcli-hak11
-    pip install hcli-core
-    pip install huckle
-    pip install gunicorn
-    gunicorn --workers=1 --threads=1 -b 0.0.0.0:8000 "hcli_core:connector(\"`hcli_hak11 path`\")"
-
-Usage
------
-
-Open a different shell window.
-
-Setup the huckle env eval in your .bash_profile (or other bash configuration) to avoid having to execute eval everytime you want to invoke HCLIs by name (e.g. hc).
-
-Note that no CLI is actually installed by Huckle. Huckle reads the HCLI semantics exposed by the API via HCLI Connector and ends up behaving *like* the CLI it targets.
-
-
-.. code-block:: console
-
-    huckle cli install http://127.0.0.1:8000
-    eval $(huckle env)
-    hak11 help
-
-Versioning
-----------
-    
-This project makes use of semantic versioning (http://semver.org) and may make use of the "devx",
-"prealphax", "alphax" "betax", and "rcx" extensions where x is a number (e.g. 0.3.0-prealpha1)
-on github.
-
-Supports
---------
-
-- Interacting with raspberry pi GPIO setup to trigger a properly configured relay connected to a Linear AK-11 keypad's 7 circuit pins.
 
 To Do
 -----

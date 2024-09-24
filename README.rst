@@ -39,19 +39,18 @@ The AK-11 keypad uses a matrix circuit design.
 Each button connects a unique combination of row and column pins when pressed.
 The circuit remains open until a button is pressed, closing the circuit for that specific pin combination.
 
-Digit Pins
-* 1     2,3
-* 2     3,4
-* 3     3,5
-* 4     2,6
-* 5     4,6
-* 6     5,6
-* 7     2,7
-* 8     4,7
-* 9     5,7
-* \*     1,2
-* 0     1,4
-* #     1,5
+* Digit 1, Pins 2,3
+* Digit 2, Pins 3,4
+* Digit 3, Pins 3,5
+* Digit 4, Pins 2,6
+* Digit 5, Pins 4,6
+* Digit 6, Pins 5,6
+* Digit 7, Pins 2,7
+* Digit 8, Pins 4,7
+* Digit 9, Pins 5,7
+* Digit \*, Pins 1,2
+* Digit 0, Pins 1,4
+* Digit #, Pins 1,5
 
 Relay Function
 --------------
@@ -78,19 +77,18 @@ Relay Configuration
 
 By convention, and for simplicity's sake, the relays are setup such that they numerically align to digits.
 
-Relay Digit
-* 1     1
-* 2     2
-* 3     3
-* 4     4
-* 5     5
-* 6     6
-* 7     7
-* 8     8
-* 9     9
-* 10    \*
-* 11    0
-* 12    #
+* Relay 1, Digit 1
+* Relay 2, Digit 2
+* Relay 3, Digit 3
+* Relay 4, Digit 4
+* Relay 5, Digit 5
+* Relay 6, Digit 6
+* Relay 7, Digit 7
+* Relay 8, Digit 8
+* Relay 9, Digit 9
+* Relay 10, Digit \*
+* Relay 11, Digit 0
+* Relay 12, Digit #
 
 GPIO 40 pin Schema
 ------------------
@@ -102,27 +100,26 @@ we connect the relays in the convention order from top (starting on the left) to
 
 We ommit 3v power. 5v power is connected to the 5v power pins on the relay board (SainSmart 16-Channel 12V Relay Module Board for Arduino DSP AVR PIC ARM) so that the raspberry pi zero can be powered by the relay's 5v output.
 
-GPIO        Relay
-* 5v (2)      5v
-* 5v (4)      5v
-* GPIO2       1
-* GPIO3       2
-* GPIO4       3
-* GPIO17      4
-* GPIO27      5
-* GPIO22      6
-* GPIO10      7
-* GPIO9       8
-* GPIO11      9
-* GPIO5       10
-* GPIO6       11
-* GPIO13      12
-* GPIO19      13 (unused)
-* GPIO26      14 (unused)
-* GPIO21      15 (unused)
-* GPIO20      16 (unused)
-* Ground (34) Ground
-* Ground (30) Ground
+* 5v (2),      Relay Pin 5v
+* 5v (4),      Relay Pin 5v
+* GPIO2,       Relay 1
+* GPIO3,       Relay 2
+* GPIO4,       Relay 3
+* GPIO17,      Relay 4
+* GPIO27,      Relay 5
+* GPIO22,      Relay 6
+* GPIO10,      Relay 7
+* GPIO9,       Relay 8
+* GPIO11,      Relay 9
+* GPIO5,       Relay 10
+* GPIO6,       Relay 11
+* GPIO13,      Relay 12
+* GPIO19,      Relay 13 (unused)
+* GPIO26,      Relay 14 (unused)
+* GPIO21,      Relay 15 (unused)
+* GPIO20,      Relay 16 (unused)
+* Ground (34), Relay Ground
+* Ground (30), Ground
 
 Installation
 ------------

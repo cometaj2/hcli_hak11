@@ -119,7 +119,7 @@ We ommit 3v power. 5v power is connected to the 5v power pins on the relay board
 * GPIO21,      Relay 15 (unused)
 * GPIO20,      Relay 16 (unused)
 * Ground (34), Relay Ground
-* Ground (30), Ground
+* Ground (30), Relay Ground
 
 Installation
 ------------

@@ -47,10 +47,6 @@ class CLI:
 
             return None
 
-        # a named job
-        elif self.commands[1] == "admin":
-            return None
-
         elif self.commands[1] == "logs":
             return self.service.tail()
 
